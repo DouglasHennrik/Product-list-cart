@@ -1,37 +1,41 @@
 @font-face {
-  font-family: 'Red Hat Text';
-  src: url('../assets/fonts/RedHatText-VariableFont_wght.ttf') 
-  format('truetype');
+  font-family: "Red Hat Text";
+  src: url("../assets/fonts/RedHatText-VariableFont_wght.ttf")
+    format("truetype");
 }
 
+$primary-color: hsl(14, 86%, 42%);
+$rose-400: hsl(7, 20%, 60%);
+$rose-900: hsl(14, 65%, 9%);
+$rose-100: hsl(13, 31%, 94%);
+$rose-50: hsl(20, 50%, 98%);
 
-  $primary: hsl(14, 86%, 42%);
-  $rose-400: hsl(7, 20%, 60%);
-  $rose-900: hsl(14, 65%, 9%);
-  $rose-100: hsl(13, 31%, 94%);
-  $rose-50: hsl(20, 50%, 98%);
-
-  .container{
-    width: 250px;
-    height: 260px;
-    background-color: gray;
-    position: relative;
-  }
-
-  .button{
-    border-radius: 16px; 
-    position: absolute;
-    bottom: 0px;
-    left: 50%;
-    transform: translate(-50%,50%);
-  }
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+}
 
 body {
   font-family: "Red Hat Text", sans-serif;
 }
 
+.container {
+  width: 150px;
+  height: 160px;
+  background-color: grey;
+  position: relative;
+}
+
+.center {
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  transform: translate(-50%, 50%);
+}
+
 .product-price {
-  color: $primary;
+  color: $primary-color;
   font-weight: 700;
 }
 
@@ -47,7 +51,8 @@ body {
 
 .button {
   background-color: $rose-100;
-  padding: 15px 20px
+  padding: 15px 20px;
+  border-radius: 16px;
 }
 
 .icon {
