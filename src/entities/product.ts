@@ -17,19 +17,23 @@ export class Product {
     this._imageUrl = imageUrl;
   }
 
-  updateTotal(){
-    this._total = this.price * this._quantity;
+  get id() {
+    return this._id;
   }
 
-  incrementQuantity(){
+  updateTotal() {
+    this._total = this._price * this._quantity;
+  }
+
+  incrementQuantity() {
     this._quantity += 1;
     this.updateTotal();
 
     Cart.addToCart(this);
   }
 
-  decrementQuantity(){
-    this._quantity -= 1
+  decrementQuantity() {
+    this._quantity -= 1;
     this.updateTotal();
   }
 
@@ -38,7 +42,7 @@ export class Product {
   }
 
   get quantity() {
-    return this._quantity
+    return this._quantity;
   }
 
   set quantity(quantity: number) {
